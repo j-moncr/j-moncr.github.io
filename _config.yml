@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Jordan Moncrieff"
 title_separator          : "-"
 name                     : &name "Jordan Moncrieff"
-description              : &description "Jordan's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Jordan Moncrieff's academic research page"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://github.com/j-moncr/jm.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,10 +23,10 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "ozgrav_profile_photo.png"
   name             : "Jordan Moncrieff"
   pronouns         : # example: "she/her"  
-  bio              : "I am a final year PhD student studying ..."
+  bio              : "I am a final year PhD student studying black hole mergers in AGN discs."
   location         : "Perth, Western Australia"
   employer         : "University of Western Australia"
   uri              : # URL
@@ -143,11 +143,10 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : og-image.png   # Social media default site image (lives in /images/)
+og_image                 : ozgrav_profile_photo.png   # Social media default site image (lives in /images/)
 og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
-social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
@@ -222,14 +221,15 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
+    output: False
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: False
     permalink: /:collection/:path/
+    exclude: true
   talks:
     output: true
     permalink: /:collection/:path/
@@ -261,7 +261,7 @@ defaults:
       type: teaching
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       share: true
       comments: true
   # _publications
